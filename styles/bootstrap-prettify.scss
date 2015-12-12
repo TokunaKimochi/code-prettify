@@ -51,7 +51,11 @@ ol.linenums {
     color: #bebec5;
     line-height: 20px;
     text-shadow: 0 1px 0 #fff;
-    &::-moz-selection, &::selection {
+    ::-moz-selection {
+      background-color: #f9c;
+      text-shadow: none;
+    }
+    ::selection {
       background-color: #f9c;
       text-shadow: none;
     }
