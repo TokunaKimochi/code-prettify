@@ -34,6 +34,9 @@
   padding: 8px;
   background-color: #f7f7f9;
   border: 1px solid #e1e1e8;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
   /* For Chrome */
   overflow-x: auto;
   overflow-y: hidden;
@@ -41,6 +44,16 @@
     -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
     -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
     box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+  }
+  code {
+    padding: 0px;
+    margin: 0px;
+    background-color: transparent;
+    border: 0 none transparent;
+    white-space: pre-wrap;
+  }
+  ol {
+    padding: 0;
   }
 }
 
