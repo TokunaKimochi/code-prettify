@@ -1,0 +1,34 @@
+{
+  "name": "code-prettify",
+  "version": "1.0.0",
+  "description": "Google Code Prettify",
+  "license": "Apache-2.0",
+  "keywords": [
+    "syntax",
+    "highlight",
+    "highlighting",
+    "source",
+    "code",
+    "prettify",
+    "google"
+  ],
+  "maintainers": [
+    "Mike Samuel <mikesamuel@gmail.com>"
+  ],
+  "contributors": [
+    "Amro <amroamroamro@gmail.com>"
+  ],
+  "main": "prettify.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/TokunaKimochi/code-prettify.git"
+  },
+  "author": "TokunaKimochi",
+  "bugs": {
+    "url": "https://github.com/TokunaKimochi/code-prettify/issues"
+  },
+  "homepage": "https://github.com/TokunaKimochi/code-prettify#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
