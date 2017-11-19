@@ -13,8 +13,10 @@ gulp.task('deploy', function() {
 
 gulp.task('js', function() {
   return gulp.src(['./src/autoload_css.js', './src/prettify.js', './src/lang-css.js', './src/lang-go.js', './src/lang-lisp.js', './src/lang-sql.js', './src/lang-dos.js'])
-    .pipe(concat('prettify.min.js'))
+    .pipe(concat('prettify.js'))
+    .pipe(gulp.dest('./public/'))
     .pipe(uglify())
+    .pipe(rename('prettify.min.js'))
     .pipe(gulp.dest('./public/'));
 });
 
