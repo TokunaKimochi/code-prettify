@@ -18,7 +18,7 @@
   "contributors": [
     "Amro <amroamroamro@gmail.com>"
   ],
-  "main": "prettify.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/TokunaKimochi/code-prettify.git"
