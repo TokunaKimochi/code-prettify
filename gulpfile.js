@@ -11,14 +11,26 @@ gulp.task('deploy', function() {
     .pipe(ghPages());
 });
 
-gulp.task('js', function() {
+gulp.task('browser', function() {
   return gulp.src(['./src/autoload_css.js', './src/prettify.js', './src/lang-css.js', './src/lang-go.js', './src/lang-lisp.js', './src/lang-sql.js', './src/lang-dos.js'])
-    .pipe(concat('prettify.js'))
-    .pipe(gulp.dest('./public/'))
+    .pipe(concat('prettify.min.js'))
     .pipe(uglify())
-    .pipe(rename('prettify.min.js'))
     .pipe(gulp.dest('./public/'));
 });
+
+gulp.task('webpack-main', function() {
+  return gulp.src('./src/prettify.js')
+    .pipe(rename('main.js'))
+    .pipe(gulp.dest('./public/'));
+});
+
+gulp.task('webpack-optional', function() {
+  return gulp.src(['./src/lang-css.js', './src/lang-go.js', './src/lang-lisp.js', './src/lang-sql.js', './src/lang-dos.js'])
+    .pipe(concat('optional.js'))
+    .pipe(gulp.dest('./public/'));
+});
+
+gulp.task('js', ['browser', 'webpack-main', 'webpack-optional']);
 
 gulp.task('css', function () {
   return sass('./styles/bootstrap-prettify.scss', {
